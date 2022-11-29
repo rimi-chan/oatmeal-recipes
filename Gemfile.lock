@@ -215,6 +215,7 @@ DEPENDENCIES
   rack-mini-profiler (= 2.3.3)
   rails (= 6.1.4.4)
   sass-rails (= 6.0.0)
+  sassc-rails
   selenium-webdriver (= 4.1.0)
   spring (= 3.1.1)
   turbolinks (= 5.2.1)
