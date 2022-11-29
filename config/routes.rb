@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+devise_for :users
 
 resources :users, only: [:index, :show, :edit, :update]
 resources :home, only: [:index]
@@ -7,6 +9,11 @@ resources :powders, only: [:index, :new, :create, :show, :search, :edit, :update
 
 root to: "home#index"
 
-devise_for :users
+
+
+devise_scope :user do
+  get '/users/sign_out' => 'devise/sessions#destroy'
+end
+
 
 end

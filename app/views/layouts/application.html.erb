@@ -5,12 +5,40 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+　　<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+　　<link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
   </head>
+  
+  <header>
+    <div style="padding-top: 6rem">
+      <div class="wrapper" >
+        <nav class="navbar navbar-dark fixed-top" style="background-color:#F4A460;">
+          <div class = "navbar-brand">
+            <%= link_to root_path, class: "navbar-item"  do  %>
+            <h1 class = "mt-1 text-white" style="padding-left:50px; font-family: 'Alegreya Sans SC', sans-serif;" >Oatmeal.sweets</h1>
+            <% end %>
+          </div>
+          <div class="text-right">
+            <% if user_signed_in? %>
+             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete,  class:"btn btn-light text-secondary" %>
+            <% else %>
+             <%= link_to '登録', new_user_registration_path, class:"btn btn-light text-secondary " %>
+             <%= link_to 'ログイン', new_user_session_path, class:"btn btn-light text-secondary" %>
+          </div>
+          <% end %>
+        </nav>
+        </div>
+</header>
 
-  <body>
     <%= yield %>
-  </body>
+
+<footer>
+   <div class="text-center">
+     <p style="padding-top:30px; color:white; font-family: 'Alegreya Sans SC', sans-serif; font-size:20px;">©2022 Oatmeal.sweets</p>
+   </div>
+ </footer>
 </html>
