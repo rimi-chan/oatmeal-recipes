@@ -1,2 +1,36 @@
-<h1>Oats#show</h1>
-<p>Find me in app/views/oats/show.html.erb</p>
+<div class="body-show">
+  <div class = "top">
+    <div class="container">
+      <div class=" row oat-show">
+        <div class="oat-name my-5">
+           <h3><%= @oat.oat_name %></h3>
+        </div>
+        <div class="col-4" style=" margin-left: 40px; margin-top: -10px;">
+         <div>
+           <%= image_tag (@oat.oat_image_id.url), size: '400x400'%>
+         </div>
+        </div>
+        <div class="oat-tool col-4" style=" margin-left: 200px; margin-top: 40px;">
+          <p><span class="under">材料</p>
+          <p><%= simple_format @oat.oat_tool %></p>
+        </div>
+        <div class="oat-word container" style="margin-left: 80px; margin-top: -60px;">
+          <div class="row" style="padding-bottom:20px; padding-top:100px;">
+            <div class="col-1" style="position:relative; height: 8vh; width:10vh; padding-left:45px;">
+              <%= link_to user_path(@oat.user), class: "panel-block" do %>
+                <p  style="position: absolute; bottom: 10px;" ><%= @oat.user.username%></p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div style="padding-left:100px; padding-top:10px;">
+          <p><%= simple_format @oat.oat_word %></p>
+        </div>
+        <div class="oat-instructions" style=" margin-left: 80px; margin-bottom: 40px;">
+          <p class="under"style="padding-bottom:10px; padding-top:30px;">作り方</p>
+          <p><%= simple_format @oat.oat_instructions %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
