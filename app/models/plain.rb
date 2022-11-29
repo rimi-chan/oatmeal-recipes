@@ -1,2 +1,0 @@
-class Plain < ApplicationRecord
-end
