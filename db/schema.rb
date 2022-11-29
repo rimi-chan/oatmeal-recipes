@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_29_075938) do
+ActiveRecord::Schema.define(version: 2022_11_29_081603) do
+
+  create_table "oats", charset: "utf8mb4", force: :cascade do |t|
+    t.string "oat_name"
+    t.text "oat_instructions"
+    t.string "oat_image_id"
+    t.text "oat_tool"
+    t.text "oat_word"
+    t.integer "oat_id"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "powders", charset: "utf8mb4", force: :cascade do |t|
+    t.string "powder_name"
+    t.text "powder_instructions"
+    t.string "powder_image_id"
+    t.text "powder_tool"
+    t.text "powder_word"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "email", default: "", null: false

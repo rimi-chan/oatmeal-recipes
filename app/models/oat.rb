@@ -1,0 +1,2 @@
+class Oat < ApplicationRecord
+end
