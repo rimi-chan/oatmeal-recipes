@@ -23,6 +23,25 @@ class PowdersController < ApplicationController
     @powder = Powder.find_by(id:params[:id])
   end
   
+  def edit
+    @powder = Powder.find_by(id:params[:id])
+  end
+  
+  def update
+    @powder = Powder.find_by(id:params[:id])
+    if @powder.update(powder_params)
+      redirect_to @powder
+    else
+      render :edit
+    end
+  end
+  
+  def destroy
+    @powder = Powder.find_by(id:params[:id])
+    @powder.destroy
+    redirect_to @powder
+  end
+  
   
   private
   def powder_params

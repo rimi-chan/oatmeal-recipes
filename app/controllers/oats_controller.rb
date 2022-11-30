@@ -22,6 +22,26 @@ class OatsController < ApplicationController
   def show
     @oat = Oat.find_by(id:params[:id])
   end
+
+  def edit
+    @oat = Oat.find_by(id:params[:id])
+  end
+  
+  def update
+    @oat = Oat.find_by(id:params[:id])
+    if @oat.update(oat_params)
+      redirect_to @oat
+    else
+      render :edit
+    end
+  end
+  
+  def destroy
+    @oat = Oat.find_by(id:params[:id])
+    @oat.destroy
+    redirect_to @oat
+  end
+  
   
   
   private
