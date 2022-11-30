@@ -102,6 +102,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.10.2)
+      devise (>= 4.8.0)
     erubi (1.11.0)
     ffi (1.15.5)
     globalid (1.0.0)
@@ -274,6 +276,7 @@ DEPENDENCIES
   capybara (= 3.36.0)
   carrierwave (~> 2.0)
   devise
+  devise-i18n
   jbuilder (= 2.11.5)
   kaminari
   listen (= 3.7.1)
