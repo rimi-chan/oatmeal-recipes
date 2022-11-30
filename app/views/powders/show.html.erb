@@ -16,9 +16,9 @@
         </div>
         <div class="powder-word container" style="margin-left: 80px; margin-top: -60px;">
           <div class="row" style="padding-bottom:20px; padding-top:100px;">
-            <div class="col-1" style="position:relative; height: 8vh; width:10vh; padding-left:45px;">
+          <div class="col-1">
               <%= link_to user_path(@powder.user), class: "panel-block" do %>
-                <p  style="position: absolute; bottom: 10px;" ><%= @powder.user.username%></p>
+              <%= image_tag (@powder.user.user_image_id.url), style: "border-radius: 80%; width: 80px; height: 80px; object-fit:cover;" %>
               <% end %>
             </div>
             <div class="col-1" style="position:relative; height: 8vh; width:10vh; padding-left:45px;">
