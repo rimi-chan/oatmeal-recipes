@@ -1,0 +1,51 @@
+<h3>検索結果</h3>
+<table class="table table-hover table-inverse">
+  <section class="section" style="padding-bottom:80px;">
+    <div class="container">
+      <div class="row">
+        <% @oats.each do |oat| %>
+        <div class="m-4 col-2" style="padding-top:30px;">
+          <div class="card">
+            <div class="card-image">
+              <div class="image">
+                <%= link_to oat_path(oat) do %>
+                <%= image_tag oat.oat_image_id.url, size: '194x230'%>
+                <% end %>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="content m-3">
+               <%= link_to oat.oat_name,oat_path(oat),class:"link"%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+    　</div>
+  　</div>
+　</section>
+  <section class="section" style="padding-bottom:80px;">
+    <div class="container">
+      <div class="row">
+        <% @powders.each do |powder| %>
+        <div class="m-4 col-2" style="padding-top:30px;">
+          <div class="card" >
+            <div class="card-image">
+              <div class="image">
+                <%= link_to powder_path(powder) do %>
+                <%= image_tag powder.powder_image_id.url, size: '194x230'%>
+                <% end %>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="content m-3">
+                <%= link_to powder.powder_name,powder_path(powder),class:"link"%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</table>
