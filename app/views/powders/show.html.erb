@@ -21,6 +21,11 @@
                 <p  style="position: absolute; bottom: 10px;" ><%= @powder.user.username%></p>
               <% end %>
             </div>
+            <div class="col-1" style="position:relative; height: 8vh; width:10vh; padding-left:45px;">
+              <%= link_to user_path(@powder.user), class: "panel-block" do %>
+                <p  style="position: absolute; bottom: 10px;" ><%= @powder..user.username%></p>
+              <% end %>
+            </div>
           </div>
         </div>
         <div style="padding-left:100px; padding-top:10px;">
@@ -29,6 +34,12 @@
         <div class="powder-instructions" style=" margin-left: 80px; margin-bottom: 40px;">
           <p class="under"style="padding-bottom:10px; padding-top:30px;">作り方</p>
           <p><%= simple_format @powder.powder_instructions %></p>
+        </div>
+        <div style="margin-left:700px; margin-bottom:40px; margin-top:40px;">
+            <% if @powder.user = current_user%>
+            <p><%= link_to "編集する", edit_powder_path %></p>
+            <p><%= link_to "削除する", powder_path, method: :delete %></p>
+          <% end %>
         </div>
       </div>
     </div>

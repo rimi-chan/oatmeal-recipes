@@ -14,7 +14,7 @@
           <p><span class="under">材料</p>
           <p><%= simple_format @oat.oat_tool %></p>
         </div>
-        <div class="plain-word container" style="margin-left: 80px; margin-top: -60px;">
+        <div class="oat-word container" style="margin-left: 80px; margin-top: -60px;">
           <div class="row" style="padding-bottom:20px; padding-top:100px;">
             <div class="col-1">
               <%= link_to user_path(@oat.user), class: "panel-block" do %>
@@ -34,6 +34,12 @@
         <div class="oat-instructions" style=" margin-left: 80px; margin-bottom: 40px;">
           <p class="under"style="padding-bottom:10px; padding-top:30px;">作り方</p>
           <p><%= simple_format @oat.oat_instructions %></p>
+        </div>
+        <div style="margin-left:700px; margin-bottom:40px; margin-top:40px;">
+          <% if @oat.user = current_user%>
+            <p><%= link_to "編集する", edit_oat_path %></p>
+            <p><%= link_to "削除する", oat_path, method: :delete %></p>
+          <% end %>
         </div>
       </div>
     </div>
