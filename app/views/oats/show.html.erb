@@ -1,7 +1,7 @@
 <div class="body-show">
   <div class = "top">
     <div class="container">
-      <div class=" row oat-show">
+      <div class=" row powder-show">
         <div class="oat-name my-5">
            <h3><%= @oat.oat_name %></h3>
         </div>
@@ -14,8 +14,13 @@
           <p><span class="under">材料</p>
           <p><%= simple_format @oat.oat_tool %></p>
         </div>
-        <div class="oat-word container" style="margin-left: 80px; margin-top: -60px;">
+        <div class="plain-word container" style="margin-left: 80px; margin-top: -60px;">
           <div class="row" style="padding-bottom:20px; padding-top:100px;">
+            <div class="col-1">
+              <%= link_to user_path(@oat.user), class: "panel-block" do %>
+              <%= image_tag (@oat.user.user_image_id.url), style: "border-radius: 80%; width: 80px; height: 80px; object-fit:cover;" %>
+              <% end %>
+            </div>
             <div class="col-1" style="position:relative; height: 8vh; width:10vh; padding-left:45px;">
               <%= link_to user_path(@oat.user), class: "panel-block" do %>
                 <p  style="position: absolute; bottom: 10px;" ><%= @oat.user.username%></p>
@@ -34,3 +39,4 @@
     </div>
   </div>
 </div>
+

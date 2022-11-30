@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_29_161541) do
+ActiveRecord::Schema.define(version: 2022_11_29_163318) do
 
   create_table "oats", charset: "utf8mb4", force: :cascade do |t|
     t.string "oat_name"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2022_11_29_161541) do
     t.string "username"
     t.string "user_image_id"
     t.string "profile_image_id"
+    t.text "profile"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
