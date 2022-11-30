@@ -17,6 +17,7 @@ gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem "refile-mini_magick"
 gem 'refile', require: 'refile/rails', github: 'refile/refile'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', '11.1.3'

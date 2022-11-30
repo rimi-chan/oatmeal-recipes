@@ -3,7 +3,7 @@ class OatsController < ApplicationController
   before_action :authenticate_user!, except: [:index,:show]
   
   def index
-    @oats = Oat.all
+    @oats = Oat.all.order(id: "DESC").page(params[:page]).per(8)
   end
 
   def new

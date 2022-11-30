@@ -5,8 +5,8 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @user = User.find_by(id:params[:id])
-    @oats = @user.oats
-    @powders = @user.powders
+    @oats = @user.oats.page(params[:page]).page(params[:page]).per(8)
+    @powders = @user.powders.page(params[:page]).page(params[:page]).per(8)
   end
   
   def edit

@@ -3,7 +3,7 @@ class PowdersController < ApplicationController
   before_action :authenticate_user!, except: [:index,:show]
   
   def index
-    @powders = Powder.all
+    @powders = Powder.all.order(id: "DESC").page(params[:page]).per(8)
   end
 
   def new
