@@ -47,5 +47,4 @@ class PowdersController < ApplicationController
   def powder_params
     params.require(:powder).permit(:powder_name, :powder_image_id, :powder_tool, :powder_word, :powder_instructions)
   end
-  
 end

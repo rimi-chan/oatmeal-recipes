@@ -20,7 +20,6 @@ gem 'refile', require: 'refile/rails', github: 'refile/refile'
 gem 'kaminari'
 gem 'devise-i18n'
 
-
 group :development, :test do
   gem 'byebug', '11.1.3'
 end

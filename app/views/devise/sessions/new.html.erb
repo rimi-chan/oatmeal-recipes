@@ -1,12 +1,11 @@
-    <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <div class ="container">
     <h3 class="form-signin-heading">ログイン</h3>
     <div style="padding-left:500px; padding-top:70px;">
         <div class="m-4" type="text">
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
- 
             <p><%= f.label :email,"メールアドレス" %></p>
             <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>

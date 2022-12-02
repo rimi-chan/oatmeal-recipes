@@ -15,5 +15,4 @@ class Oat < ApplicationRecord
       @Oat = Oat.all
     end
   end
-  
 end

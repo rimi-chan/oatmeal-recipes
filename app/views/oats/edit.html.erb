@@ -1,34 +1,27 @@
 <h3>オ ー ト ミ　ー　ル　の レ シ ピ を 編 集 </h3>
 
 <%= form_for(@oat, url: oat_path(@oat)) do |f| %>
-
 <table style="padding-top: 5rem" class="d-flex justify-content-center">
-  
   <tr>
     <th><%= f.label :oat_image_id,"レシピ画像",class:" mb-5 mr-5 under"%></th>
     <td><%= f.file_field :oat_image_id,placeholder:"レシピ画像を投稿",class:" mb-5" %></td>
   </tr>
-  
   <tr>
     <th><%= f.label :oat_name,"レシピ名",class:"mb-5 under" %></th>
     <td><%= f.text_field :oat_name,placeholder:"レシピ名を入力",class:"mb-5" %></td>
   </tr>
-
   <tr>
     <th><%= f.label :oat_tool,"材料",class:"mb-5 under" %></th>
     <td><%= f.text_area :oat_tool,placeholder:" 材料を入力 (例)・豆乳 100ml ・バナナ １本",size: "50x50",class:"mb-5",size: "30x8" %></td>
   </tr>
-  
   <tr>
     <th><%= f.label :oat_instructions,"作り方",class:"mb-5 under" %></th>
     <td><%= f.text_area :oat_instructions,placeholder:"作り方の手順",class:"mb-5",size: "50x20" %></td>
   </tr>
-  
   <tr>
     <th><%= f.label :oat_word,"一言",class:"mb-5 under"%></th>
     <td><%= f.text_field :oat_word,placeholder:"アドバイスやその他備考",class:"mb-5",size: 30 %></td>
   </tr>
-  
   <tr>
     <th class="pb-5"><%= f.submit "更新", class:"btn btn-light text-secondary" %></th>
   </tr>

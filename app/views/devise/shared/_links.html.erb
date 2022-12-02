@@ -1,13 +1,13 @@
 <div style="padding-left:10px;  padding-top:30px;">
-<%- if controller_name != 'sessions' %>
-     <p><%= link_to "ログインはこちら", new_session_path(resource_name),class:"text-muted"%></p>
-    <% end %>
+  <%- if controller_name != 'sessions' %>
+  <p><%= link_to "ログインはこちら", new_session_path(resource_name),class:"text-muted"%></p>
+  <% end %>
 </div>
 
 <div  style="padding-left:40px; padding-top:30px;">
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-    <p><%= link_to "ユーザー登録はこちら", new_registration_path(resource_name),class:"text-muted"%></p>
-      <% end %>
+  <p><%= link_to "ユーザー登録はこちら", new_registration_path(resource_name),class:"text-muted"%></p>
+  <% end %>
 </div>
 
 <div  style=" padding-left:20px;padding-bottom:60px;">
@@ -15,7 +15,6 @@
   <p><%= link_to "パスワード忘れた方はこちら", new_password_path(resource_name),class:"text-muted"%></p>
 <% end %>
 </div>
-
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
   <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />

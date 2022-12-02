@@ -15,5 +15,4 @@ class Powder < ApplicationRecord
       @Powder = Powder.all
     end
   end
-  
 end

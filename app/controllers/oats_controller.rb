@@ -46,5 +46,4 @@ class OatsController < ApplicationController
   def oat_params
     params.require(:oat).permit(:oat_name, :oat_image_id, :oat_tool, :oat_word, :oat_instructions)
   end
-  
 end
