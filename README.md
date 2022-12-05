@@ -20,12 +20,12 @@
   
  # 機能一覧
  -　 ユーザー登録、ログイン機能(devise)
-    - エラー表示の日本語化(devise-i18n)
-  - 投稿機能
-    - 画像投稿機能(refile)
-    -　　画像アップロード機能(CarrierWave)
-  - ページネーション(kaminari)
-  - 検索機能(html内)
-  - 自動スクロール　（html内)
+  - エラー表示の日本語化(devise-i18n)
+ - 投稿機能
+  - 画像投稿機能(refile)
+  -　　画像アップロード機能(CarrierWave)
+ - ページネーション(kaminari)
+ - 検索機能(html内)
+ - 自動スクロール　（html内)
 
   
