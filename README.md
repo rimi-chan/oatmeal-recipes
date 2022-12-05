@@ -19,16 +19,11 @@
   - Bootstrap
   
  # 機能一覧
-
-
 - ユーザー登録、ログイン機能(devise)
+　　　　- エラー表示の日本語化(devise-i18n)
 - 投稿機能
   - 画像投稿(refile)
-  - 位置情報検索機能(geocoder)
-- いいね機能(Ajax)
-  - ランキング機能
-- コメント機能(Ajax)
-- フォロー機能(Ajax)
+  - 画像アップロード機能(CarrierWave)
 - ページネーション機能(kaminari)
-  - 無限スクロール(Ajax)
-- 検索機能(ransack)
+- 検索機能(html内)
+- 自動スクロール　（html内)
