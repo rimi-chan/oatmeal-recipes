@@ -47,7 +47,6 @@ class OatsController < ApplicationController
     redirect_to @oat
   end
   
-  
   private
   def oat_params
     params.require(:oat).permit(:oat_name, :oat_image_id, :oat_tool, :oat_word, :oat_instructions)
