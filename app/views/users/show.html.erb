@@ -1,0 +1,92 @@
+<div class="body-show">
+  <div class = "top">
+    <div class="container">
+      <div class="powder-show">
+        　<div class="powder-name" style="margin-top:-45px;">
+          　<%=  image_tag (@user.profile_image_id.url), size: "800x300" %>
+          </div>
+          <div class="powder-word container" style="margin-left: 40px; margin-top: -60px;">
+            <div class="row" style="padding-bottom:20px; padding-top:80px;">
+              <div class="col-1" style="margin-top:40px;">
+                <%= image_tag (@user.user_image_id.url), style: "border-radius: 120%; width: 120px; height: 120px; object-fit:cover;"%>
+              </div>
+              <div class="col-1" style="position:relative; height: 8vh; width:20vh; padding-left:90px; margin-top:55px; font-size:25px;">
+                <p><%= @user.username %></p>
+              </div>
+              <div style="padding-left:160px; margin-top:-30px; font-size:20px;">
+                <p><%= @user.profile%></p>
+              </div>
+            </div>
+            <div  style="margin-left:20px;">
+              <% if @user.id == current_user.id %>
+              <%= link_to "マイページを編集する", edit_user_path(@user),class:"text-muted"%>
+              <% end %>
+            </div>
+          </div>
+          <section class="section" style="padding-bottom:80px;">
+            <div class="container">
+              <div style="margin-top:90px; margin-left:100px;">
+                <p>オートミールのレシピ一覧</p>
+                <%= link_to 'レシピを投稿', new_oat_path, class:"text-muted" %>
+              </div>
+              <div class="row" style="padding-left:80px;">
+                <% @oats.each do |oat| %>
+                <div class="m-3 col-3" style="padding-top:30px;">
+                  <div class="card" >
+                    <div class="card-image">
+                      <div class="image">
+                        <%= link_to oat_path(oat) do %>
+                        <%= image_tag oat.oat_image_id.url, size: '154x180'%>
+                        <% end %>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="content m-3">
+                        <%= link_to oat.oat_name,oat_path(oat),class:"link"%>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               <% end %>
+              </div>
+            </div>
+          </section>
+          <div style="padding-left:300px; padding-bottom:40px;">
+            <%= paginate @oats %>
+          </div>
+          <section class="section" style="padding-bottom:80px;">
+            <div class="container">
+              <div style="margin-left:100px;">
+                <p>オートフラワーのレシピ一覧</p>
+                <%= link_to 'レシピを投稿', new_powder_path, class:"text-muted" %>
+              </div>
+              <div class="row" style="padding-left:80px;">
+                <% @powders.each do |powder| %>
+                <div class="m-3 col-3" style="padding-top:30px;">
+                  <div class="card" >
+                    <div class="card-image">
+                      <div class="image">
+                        <%= link_to powder_path(powder) do %>
+                        <%= image_tag powder.powder_image_id.url, size: '154x180'%>
+                        <% end %>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <div class="content m-3">
+                        <%= link_to powder.powder_name,powder_path(powder),class:"link"%>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               <% end %>
+              </div>
+            </div>
+          </section>
+          <div style="padding-left:300px; padding-bottom:40px;">
+            <%= paginate @powders %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

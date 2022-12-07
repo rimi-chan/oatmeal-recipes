@@ -1,0 +1,35 @@
+<div style="padding-left:200px;">
+    <%= render "devise/shared/error_messages", resource: resource %>
+</div>
+<div class ="container" style="padding-top:40px;">
+    <h3 class="form-signin-heading">ユーザー登録</h3>
+    <div style="padding-left:500px; padding-top:70px;">
+        <div class="m-4" type="text">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <p><%= f.label :username,"ユーザー名" %></p>
+            <%= f.text_field :username, autofocus: true %>
+        </div>
+        <div class="m-4" type="password">
+            <p><%= f.label :email,"メールアドレス" %></p>
+            <%= f.email_field :email, autofocus: true %>
+        </div>
+        <% if @minimum_password_length %>
+        <div class="field m-4">
+            <p><%= f.label :password , "パスワード"%>
+            (<%= @minimum_password_length %>文字以上)</p>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "new-password" %>
+        </div>
+        <div class="m-4" type="password">
+            <p><%= f.label :password_confirmation, "パスワード確認"%></p>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+        <div class="line" style="padding-left:70px;">
+            <button class="btn link-style-btn btn-warning m-2 text-light" value="Login" type="Submit">登録</button>
+            <% end %>
+        </div>
+        <div style="padding-left:40px; padding-bottom:10px;">
+            <%= render "devise/shared/links" %>
+        </div>
+    </div>
+</div>

@@ -11,6 +11,14 @@ gem 'webpacker', '5.4.3'
 gem 'turbolinks', '5.2.1'
 gem 'jbuilder', '2.11.5'
 gem 'bootsnap', '1.10.1', require: false
+gem "sassc-rails"
+gem 'devise'
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
+gem "refile-mini_magick"
+gem 'refile', require: 'refile/rails', github: 'refile/refile'
+gem 'kaminari'
+gem 'devise-i18n'
 
 group :development, :test do
   gem 'byebug', '11.1.3'

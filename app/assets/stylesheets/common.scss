@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+h3 {
+  font-size: 1.5rem;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  padding: 3rem 3rem;
+  border-top: 5px dashed #000;
+  border-bottom: 5px dashed #000;
+  border-top: dotted 5px #DAA520;
+  border-bottom: dotted 5px #DAA520;
+}
+
+.new-img{
+  width: 400px;
+  object-fit: cover;
+}
+
+th,td {
+  display:flex;
+  lex-flow: column;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.body-show{
+  background-color: #FFF8DC;
+}
+
+.top{
+  margin-left: 400px;
+  margin-top: -40px; 
+  background-color: #FFF8DC;
+}
+
+.powder-show{
+  width: 800px;
+
+  background-color: #FFFAFA;
+}
+
+.link{
+  color: black;
+  text-decoration: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.article-card {
+    z-index: 1;
+    margin: 6em 0;
+    color: #2c2c2f;
+    background: #fff;
+    opacity: .7;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    padding-bottom: 30px;
+}
+
+.balloon1{
+  position: relative;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  background-color: #ff9800;
+}
+.balloon1::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: 2px;
+  bottom: 2px;
+  border-right: 20px solid #ff9800;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  transform: rotate(-45deg);
+}
+
+p{
+  font-family: "Sawarabi Gothic";
+  color: dimgray;
+}
+
+span{
+  font-family: "Nico Moji";
+}
+
+.point{
+    z-index: 1;
+    margin: 4em 0;
+    color: #2c2c2f;
+    position: absolute;
+    bottom: -1350px;
+}

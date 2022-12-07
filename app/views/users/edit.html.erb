@@ -1,0 +1,29 @@
+<h3>ユーザー編集</h3>
+
+<%= form_for @user do |f| %>
+<table style="padding-top: 5rem" class="d-flex justify-content-center">
+  <tr>
+    <th><%= f.label :username, "ユーザー名", class: "mb-2 under" %></th>
+    <th><%= f.text_field :username, class: "mb-3" %></th>
+  </tr>
+  <tr>
+    <th><%= f.label :email, "メールアドレス", class: "mb-2 under" %></th>
+    <td><%= f.email_field :email, class: "mb-3" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :profile, "自己紹介", class: "mb-2 under" %></th>
+    <td><%= f.text_area :profile, class: "mb-3" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :profile_image_id, "背景画像", class: "mb-2 under" %></th>
+    <td><%= f.file_field :profile_image_id, class: "mb-3" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :user_image_id, "ユーザー画像", class: "mb-2 under" %></th>
+    <td> <%= f.file_field :user_image_id, class: "mb-3" %></td>
+  </tr>
+  <tr>
+    <th style= "padding-top:60px; padding-bottom:80px;" > <%= f.submit "更新", class: "btn  text-white is-success btn-warning" %></th>
+  </tr>
+</table>
+<% end %>

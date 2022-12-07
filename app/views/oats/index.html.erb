@@ -1,0 +1,36 @@
+<section class="hero is-success">
+  <div class="hero-body m-5" style="padding-left:40px;">
+    <div class="container">
+      <h3 class="title">
+         オ ー ト ミ ー ル
+      </h3>
+    </div>
+  </div>
+</section>
+<section class="section" style="padding-bottom:80px;">
+  <div class="container">
+    <div class="row">
+          <% @oats.each do |oat| %>
+        <div class="m-4 col-2" style="padding-top:30px;">
+          <div class="card" >
+            <div class="card-image">
+              <div class="image">
+                <%= link_to oat_path(oat) do %>
+                <%= image_tag oat.oat_image_id.url, size: '194x230'%>
+                <% end %>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="content m-3">
+                <%= link_to oat.oat_name,oat_path(oat),class:"link"%>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+<div style="padding-left:700px; padding-bottom:40px;">
+   <%= paginate @oats %>
+</div>

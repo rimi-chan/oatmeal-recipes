@@ -1,0 +1,20 @@
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<div class ="container">
+  <h3 class="form-signin-heading">パスワードの再設定</h3>
+  <div style="padding-left:380px; padding-top:70px;">
+    <div class="m-4" type="text">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class=" m-5 field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+      <div class="line m-3 actions">
+        <button class="btn link-style-btn btn-warning m-2 text-light" value="Login" type="Submit">パスワードリセットのリンクを送る</button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

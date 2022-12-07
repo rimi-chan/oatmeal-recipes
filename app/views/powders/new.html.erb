@@ -1,0 +1,29 @@
+<h3>オ ー ト フ ラ ワ ー の レ シ ピ を 登 録 </h3>
+
+<%= form_with model: @powder do |f| %>
+<table style="padding-top: 5rem" class="d-flex justify-content-center">
+  <tr>
+    <th><%= f.label :powder_image_id,"レシピ画像",class:" mb-5 mr-5 under"%></th>
+    <td><%= f.file_field :powder_image_id,placeholder:"レシピ画像を投稿",class:" mb-5" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :powder_name,"レシピ名",class:"mb-5 under" %></th>
+    <td><%= f.text_field :powder_name,placeholder:"レシピ名を入力",class:"mb-5" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :powder_tool,"材料",class:"mb-5 under" %></th>
+    <td><%= f.text_area :powder_tool,placeholder:" 材料を入力 (例)・豆乳 100ml ・バナナ １本",size: "50x50",class:"mb-5",size: "30x8" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :powder_instructions,"作り方",class:"mb-5 under" %></th>
+    <td><%= f.text_area :powder_instructions,placeholder:"作り方の手順",class:"mb-5",size: "50x20" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :powder_word,"一言",class:"mb-5 under"%></th>
+    <td><%= f.text_field :powder_word,placeholder:"アドバイスやその他備考",class:"mb-5",size: 30 %></td>
+  </tr>
+  <tr>
+    <th style="padding-bottom:80px;" ><%= f.submit "登録", class:"btn text-white btn-warning" %></th>
+  </tr>
+</table>
+<% end %>
