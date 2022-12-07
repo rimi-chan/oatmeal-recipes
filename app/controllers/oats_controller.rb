@@ -1,12 +1,13 @@
 class OatsController < ApplicationController
   
-  before_action :authenticate_user!, except: [:index,:show]
+  before_action :authenticate_user!, except: [:index,:show,:edit, :update, :destroy]
   
   def index
     @oats = Oat.all.order(id: "DESC").page(params[:page]).per(8)
   end
 
   def new
+    @oat = current_user.oats.build
     @oat = Oat.new
   end
 
@@ -29,10 +30,14 @@ class OatsController < ApplicationController
   
   def update
     @oat = Oat.find_by(id:params[:id])
-    if @oat.update(oat_params)
+    if @oat.user != current_user
       redirect_to @oat
     else
+      if @oat.update(oat_params)
+      redirect_to @oat
+      else
       render :edit
+      end
     end
   end
   
@@ -41,6 +46,7 @@ class OatsController < ApplicationController
     @oat.destroy
     redirect_to @oat
   end
+  
   
   private
   def oat_params

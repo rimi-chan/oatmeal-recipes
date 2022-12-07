@@ -7,6 +7,7 @@ class PowdersController < ApplicationController
   end
 
   def new
+    @powder = current_user.oats.build
     @powder = Powder.new
   end
 
