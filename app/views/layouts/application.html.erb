@@ -57,10 +57,13 @@
         </div>
         </div>
         <% else %>
+        <div>
+          <h1  style="padding-left:1200px;"><%= link_to 'ゲストログイン(観覧用)', users_guest_sign_in_path, method: :post, class:"btn btn-light text-secondary" %></h1>
+        </div>
         <div class="m-2">
           <%= link_to "登録", new_user_registration_path,  class:"btn btn-light text-secondary"%>
           <%= link_to "ログイン", new_user_session_path,  class:"btn btn-light text-secondary" %>
-        </div>  
+        </div>
         <% end %>
         </nav>
     </div>

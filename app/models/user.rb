@@ -1,5 +1,11 @@
 class User < ApplicationRecord
-
+  
+  def self.guest
+    find_or_create_by!(email: 'guest@wxample.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+    end
+  end
+ 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
          
