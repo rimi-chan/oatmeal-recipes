@@ -12,18 +12,39 @@
   画面右上からログインと会員登録ができます。
   ログインを行うとマイページに自動的に遷移します。<br >
   
-  # ダウンロードとインストールの手順
-  1.このリポジトリをクローン
-$ git clone 
-   
-  # 使用技術
+ # ダウンロードとインストールの手順
+ 1.このリポジトリをクローン
+ '''
+ $ git clone https://github.com/rimi-chan/oatmeal-recipes.git
+ '''
+ 2.リポジトリに入る
+ '''
+ $ cd oatmeal-recipe
+ '''
+ 4.bundlerのインストール
+ '''
+ $ gem install bundler -v 2.3.5
+ '''
+ 3.yarnをインストールする
+ '''
+ $ npm install -g yarn@1.22.17
+ '''
+ 4.bootstrap5のインストール
+ '''
+ $ yarn add bootstrap
+ '''
+ 5.アニメーション周りで必要なライブラリのpopperjsをインストール
+ '''
+ $ yarn add @popperjs/core
+ '''
+  
+ # 使用技術
   - ruby 2.7.5
-  - Ruby on Rails 6.1.4.4
+   Ruby on Rails 6.1.4
   - MySQL 15.1 Distrib 10.2.38-MariaDB
-  - Bundle 2.3.5
-  - Yarn 1.22.17
+  - Heroku
   - phpMyAdmin
-  - Bootstrap
+  - git(gitHub) 
   
  # 機能一覧
 - ユーザー登録、ログイン機能(devise)
