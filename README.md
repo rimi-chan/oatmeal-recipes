@@ -14,29 +14,29 @@
   
  # ダウンロードとインストールの手順
  1.このリポジトリをクローン
- '''
+ ```
  $ git clone https://github.com/rimi-chan/oatmeal-recipes.git
- '''
+ ```
  2.リポジトリに入る
- '''
+ ```
  $ cd oatmeal-recipe
- '''
+ ```
  4.bundlerのインストール
- '''
+ ```
  $ gem install bundler -v 2.3.5
- '''
+ ```
  3.yarnをインストールする
- '''
+ ```
  $ npm install -g yarn@1.22.17
- '''
+ ```
  4.bootstrap5のインストール
- '''
+ ```
  $ yarn add bootstrap
- '''
+ ```
  5.アニメーション周りで必要なライブラリのpopperjsをインストール
- '''
+ ```
  $ yarn add @popperjs/core
- '''
+ ```
   
  # 使用技術
   - ruby 2.7.5
