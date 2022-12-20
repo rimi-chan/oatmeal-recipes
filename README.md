@@ -8,8 +8,8 @@
   
   
  # URL
-  https://64267f3970a34d2ea2cd922e125e228f.vfs.cloud9.ap-northeast-1.amazonaws.com/<br >
-  画面右上からログインと会員登録ができます。
+  https://young-hamlet-44103.herokuapp.com/<br >
+  画面右上からログインと会員登録ができます。<br >
   またゲストログインから入るとデフォルトでログインができます。<br >
   
  # ダウンロードとインストールの手順
