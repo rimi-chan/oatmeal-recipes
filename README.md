@@ -3,8 +3,7 @@
   オートミールで作るスイーツのレシピサイトです。<br >
   非会員者はレシピの閲覧ができ、登録及びログイン後はレシピの投稿と投稿者のページを閲覧することもできます。<br >
   
-  
-  <img width="1723" alt="スクリーンショット 2022-12-05 16 46 42" src="https://user-images.githubusercontent.com/104556347/205592969-aa7cc696-463a-4c51-84d4-6f97a8782fb7.png">
+  <img width="960" alt="スクリーンショット 2022-12-21 8 36 24" src="https://user-images.githubusercontent.com/104556347/208786722-3db9521a-8611-4b9d-a668-37fc337d8788.png">
   
   
  # URL
