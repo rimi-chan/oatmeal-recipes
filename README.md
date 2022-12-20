@@ -8,7 +8,7 @@
   
   
  # URL
-  https://young-hamlet-44103.herokuapp.com/
+  https://young-hamlet-44103.herokuapp.com/<br >
   画面右上からログインと会員登録ができます。<br >
   またゲストログインから入るとデフォルトでログインができます。
   
