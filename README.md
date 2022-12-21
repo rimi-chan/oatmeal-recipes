@@ -42,6 +42,7 @@
   - ruby 2.7.5
    Ruby on Rails 6.1.4
   - MySQL 15.1 Distrib 10.2.38-MariaDB
+  - node.js
   - Heroku
   - phpMyAdmin
   - git(gitHub) 
